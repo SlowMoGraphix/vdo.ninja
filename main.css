@@ -7,7 +7,7 @@
 	--discord-grey-4: #2e3035;
 	--discord-grey-5: #313338;
 	--discord-grey-6: #383a40;
-	--discord-grey-7: #404249; /* primary */
+	--discord-grey-7: #151714; /* primary - Edited */
 	--discord-grey-8: #5e6064;
 
 	--discord-text: hsl( 210 calc(1 * 9.1%) 92% /1);
@@ -65,7 +65,7 @@
 
 	/* Original colors */
 	--background-color: #141926;
-	--dark-background-color: #02050c;
+	--dark-background-color: #000000; /* Edited */
 	--container-color: #373737;
 	--button-color: #2A2A2A;
 	--blue-accent: #4a4c63;
@@ -475,10 +475,22 @@ button.hint {
 #header {
 	width: 100%;
 	padding: 1px;
-	background-color: #0F131D;
+	background-color: #151714; /* Edited */
 	color: #FFF;
 	-webkit-app-region: drag;
 }
+
+.logo {
+	position: absolute;
+	top: 2px;
+	right: 10px;
+}
+
+.logo img{
+	height: 25px;
+	width: auto;
+}
+
 #head1{
 	display: inline-block;
 	padding:1px;
@@ -2337,10 +2349,10 @@ label {
 	font-size: 2em;
 	display: block;
 	margin: auto;
-	background-color: #5555;
+	background-color: #151714;
 	border-radius: 30px;
 	cursor:pointer;
-	color: #636363;
+	color: white;
 	padding: 3px;
 	width: 100px;
 }
@@ -2447,7 +2459,7 @@ span[data-action-type="stats-graphs-details-container"]>span{
 	background-repeat: no-repeat;
 	background-size: 80px;
 	background-position: 50% 65%;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='342.728' height='325.878' viewBox='0 0 90.68 86.222' fill='none' stroke='%23000' stroke-width='5.6' stroke-linejoin='round' stroke-dashoffset='22.7149601' xmlns:v='https://vecta.io/nano'%3E%3Cpath d='M3.15 3.15h37.378v35.24H3.15zm47.002 0H87.53v35.24H50.152zM3.15 47.832h37.378v35.24H3.15zm47.002 0H87.53v35.24H50.152z'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='342.728' height='325.878' viewBox='0 0 90.68 86.222' fill='none' stroke='white' stroke-width='5.6' stroke-linejoin='round' stroke-dashoffset='22.7149601' xmlns:v='https://vecta.io/nano'%3E%3Cpath d='M3.15 3.15h37.378v35.24H3.15zm47.002 0H87.53v35.24H50.152zM3.15 47.832h37.378v35.24H3.15zm47.002 0H87.53v35.24H50.152z'/%3E%3C/svg%3E"); /* Edited */
 }
 #container-2 {
 	background-repeat: no-repeat;
@@ -2461,7 +2473,7 @@ span[data-action-type="stats-graphs-details-container"]>span{
 	transition: background-image 0.3s ease-in-out;
 	-webkit-transition: background-image 0.3s ease-in-out;
 	background-position: 50% 65%;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='347.184' height='187.007' viewBox='0 0 91.859 49.479' fill='none' stroke='%23000' stroke-width='5' stroke-linejoin='round' xmlns:v='https://vecta.io/nano'%3E%3Cpath d='M3.15 3.15h65.569v43.179H3.15z' stroke-dashoffset='22.7149601' paint-order='markers fill stroke'/%3E%3Cpath d='M68.919 28.837L88.709 44.73V7.148L69.019 22.341z'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='347.184' height='187.007' viewBox='0 0 91.859 49.479' fill='none' stroke='white' stroke-width='5' stroke-linejoin='round' xmlns:v='https://vecta.io/nano'%3E%3Cpath d='M3.15 3.15h65.569v43.179H3.15z' stroke-dashoffset='22.7149601' paint-order='markers fill stroke'/%3E%3Cpath d='M68.919 28.837L88.709 44.73V7.148L69.019 22.341z'/%3E%3C/svg%3E");
 }
 #container-3a {
 	background-repeat: no-repeat;
@@ -2474,7 +2486,7 @@ span[data-action-type="stats-graphs-details-container"]>span{
 	background-repeat: no-repeat;
 	background-size: 80px;
 	background-position: 50% 65%;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='303.594' height='274.946' viewBox='0 0 80.326 72.746' fill='none' stroke='%23000' stroke-width='4.6' stroke-linejoin='round' stroke-dashoffset='6.01000023' xmlns:v='https://vecta.io/nano'%3E%3Cpath d='M2 51.27L78.326 2l-8.03 63.359-37.093-12.414z'/%3E%3Cpath d='M33.047 70.746l.157-17.802L78.326 2 33.203 52.944l10.314 3.39z'/%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='303.594' height='274.946' viewBox='0 0 80.326 72.746' fill='none' stroke='white' stroke-width='4.6' stroke-linejoin='round' stroke-dashoffset='6.01000023' xmlns:v='https://vecta.io/nano'%3E%3Cpath d='M2 51.27L78.326 2l-8.03 63.359-37.093-12.414z'/%3E%3Cpath d='M33.047 70.746l.157-17.802L78.326 2 33.203 52.944l10.314 3.39z'/%3E%3C/svg%3E");
 }
 #container-5 {
 	background-repeat: no-repeat;
@@ -5095,7 +5107,7 @@ body.darktheme form>label{
 	color: white;
 }
 body.darktheme .column>h2{
-	color: #b6b6b6;
+	color: white;
 }
 body.darktheme .directorsgrid .vidcon > .las {
 	background-color: #424242;
@@ -5385,8 +5397,7 @@ input[type='checkbox'], input[type='radio'] {
 	background-color: var(--discord-grey-5);
 	border: 1px solid var(--discord-grey-8);
 }
-.darktheme .largeDarkIcon{
-	color: var(--dark-background-color)!important;
+.darktheme .largeDarkIcon{ /* Edited */
 }
 #addPasswordBasic,
 #avatarDiv,
