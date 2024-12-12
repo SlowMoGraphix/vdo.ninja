@@ -84,11 +84,16 @@
 		<span id="electronDragZone" style="pointer-events: none; z-index:-10; position:absolute;top:0;left:0;width:100%;height:2%;-webkit-app-region: drag;min-height:20px;"></span>
 		<div id="header">
 			
-			<a id="logoname" href="./" style="text-decoration: none; color: white; margin: 0 2px 0px 8px;">
+			<!-- <a id="logoname" href="./" style="text-decoration: none; color: white; margin: 0 2px 0px 8px;">
 				<span data-translate="logo-header">
 					<span id="qos">V</span>DO.Ninja 
 				</span>
-			</a>
+			</a> -->
+
+			<div class="logo">
+				<img src="./media/logo_psicologi.png" alt="logo_psicologi">
+			</div>
+
 			<div id="head1">
 				<input type="text" autocorrect="off" autocapitalize="none" id="joinroomID" name="joinroomID" tabindex="1" size="22" placeholder="Join by Room Name here" alt="Enter a room name to join" title="Enter a room name to quick join" onkeyup="jumptoroom(event)"/>
 				<button onclick="jumptoroom();" id='jumptoroomButton' role="button" aria-pressed="false" tabindex="1" alt="Join room" title="Join room" >GO</button>
@@ -115,11 +120,11 @@
 				<i class="las la-paperclip" style="color: #DDD;" title="Copy link to clipboard" onclick="copyFunction(document.getElementById('reshare'), event);" onmouseover="this.style.cursor='pointer'"></i>
 				<span title="Save and ask to reload the current page on next site visit" style='font-size:92%;' onclick="saveRoom(this);" onmouseover="this.style.cursor='pointer'">💾</span>
 			</div>
-			<div id="head4" style="display: inline-block;" class="hidden">
-				<span style="font-size: 68%; color: white;">
+			<div id="head4" style="display: inline-block; margin-left: 10px" class="hidden">
+				<span style="font-size: 100%; color: white;">
 					<span data-translate="you-are-in-the-control-center">Control center for room:</span>
 					
-					<div id="dirroomid" style="font-size: 140%; color: #99c; display: inline-block;"></div>
+					<div id="dirroomid" style="font-size: 140%; color: #8acee4; display: inline-block;"></div>
 					<span id="saveRoom" onclick="saveRoom(this)" style='cursor:pointer;margin-left:10px;' title="Will remember the room, prompting you the next time you visit if you wish to load this director's room again">💾</span>
 					<span id="togglePreviewMode" onclick="switchModes()" style='cursor:pointer;margin-left:2px;' title="Toggle between the director control-room view and a scene preview-mode.">🪟</span>
 				</span>
@@ -924,7 +929,7 @@
 				</div>
 			</div> -->
 			
-			<div id="container-18" class="column columnfade pointer rounded card hidden" style="display:none!important; opacity:0; width:0; height:0; overflow-y: auto;">
+			<!-- <div id="container-18" class="column columnfade pointer rounded card hidden" style="display:none!important; opacity:0; width:0; height:0; overflow-y: auto;">
 				<h2><span data-translate="whip-in">Join Room via WHIP</span></h2>
 				<i style="margin-top:30px;font-size:560%;overflow:hidden;" class="largeDarkIcon las la-broadcast-tower"></i>
 				<div class="container-inner">
@@ -943,29 +948,29 @@
 					</ul>
 					</div>
 				</div>
-				<div class="outer close">
+				<div class="a">
 					<div class="inner">
 						<label class="labelclass">
 							<span data-translate="back">Back</span>
 						</label>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			
 			<div id="container-7" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './speedtest.html';">
 				<h2><span data-translate="run-a-speed-test">Run a Speed Test</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-tachometer-alt"></i>
 			</div>
 			
-			<div id="container-8" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './mixer.html';">
+			<!-- <div id="container-8" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './mixer.html';">
 				<h2><span data-translate="try-the-mixer-out">Custom Mixed Layouts</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-blender"></i>
-			</div>
+			</div> -->
 			
-			<div id="container-14" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://versus.cam';">
+			<!-- <div id="container-14" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://versus.cam';">
 				<h2><span data-translate="try-out-versus-cam">Multi-Stream Monitor</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-gamepad"></i>
-			</div>
+			</div> -->
 			
 			<!-- <div id="container-15" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './comms.html';">
 				<h2><span data-translate="voice-comms-app">Group Voice Comms</span></h2>
@@ -986,13 +991,13 @@
 				<h2><span data-translate="get-full-documentation">Full Documentation</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-info"></i>
 			</div> -->
-			<div id="container-11" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://docs.vdo.ninja/steves-helper-apps/native-mobile-app-versions';">
+			<!-- <div id="container-11" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://docs.vdo.ninja/steves-helper-apps/native-mobile-app-versions';">
 				<h2><span data-translate="get-the-native-app">Native Mobile Apps</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-mobile"></i>
 				<div class="container-inner">
 					Loading ...
 				</div>
-			</div>
+			</div> -->
 			<!-- <div id="container-19" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = 'https://github.vdo.ninja';">
 				<h2><span data-translate="get-the-source-code">Source Code</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-code-branch"></i>
@@ -1003,12 +1008,12 @@
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-heartbeat"></i>
 			</div> -->
 			
-			<div id="container-17" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './whip';">
+			<!-- <div id="container-17" class="column columnfade pointer rounded card hidden" style="overflow: hidden;" onclick="window.location = './whip';">
 				<h2><span data-translate="publish-via-whip">Publish via WHIP</span></h2>
 				<i style="margin-top:30px;font-size:600%;overflow:hidden;" class="largeDarkIcon las la-broadcast-tower"></i>
-			</div>
+			</div> -->
 			
-			<div id="container-16" class="column columnfade pointer rounded card hidden" style=" overflow-y: auto;">
+			<!-- <div id="container-16" class="column columnfade pointer rounded card hidden" style=" overflow-y: auto;">
 				<h2><span data-translate="share-whepsrc">Share via WHEP</span></h2>
 				<i style="margin-top:30px;font-size:560%;overflow:hidden;" class="largeDarkIcon las la-broadcast-tower"></i>
 				<div class="container-inner">
@@ -1035,7 +1040,7 @@
 						</label>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			
 			<p></p>
 			
