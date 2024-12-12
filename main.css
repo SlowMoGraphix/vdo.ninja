@@ -485,6 +485,8 @@ button.hint {
 	position: absolute;
 	top: 2px;
 	right: 10px;
+	display: flex;
+	align-items: center;
 }
 
 .logo img{
@@ -506,10 +508,16 @@ button.hint {
 	text-align: right;
 	margin-right: 10px;
 	cursor: help;
-	float: right;
 	font-size: 90%;
 	line-height:100%;
 	margin-top:2px;
+	order: -1;
+}
+/* Hide on mobile devices */
+@media only screen and (max-width: 768px) {
+    #head5 {
+        display: none;
+    }
 }
 #head6 {
 	display: inline-block;
