@@ -534,6 +534,38 @@ button.hint {
     }
 }
 
+/* Add mobile-only title */
+.mobile-title {
+    display: none;
+    text-align: center;
+    padding: 10px;
+	padding-bottom: 30px;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: white;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+.mobile-description {
+	display: none;
+	text-align: left;
+	padding: 10px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	font-size: 1.4em;
+	font-weight: normal;
+	color: white;
+	max-width: 300px;
+	margin: 0 auto;
+}
+
+@media only screen and (max-width: 768px) {
+    .mobile-title, .mobile-description {
+        display: block;
+    }
+}
+
 #head6 {
 	display: inline-block;
 	text-decoration: none;
