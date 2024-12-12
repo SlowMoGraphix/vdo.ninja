@@ -517,7 +517,7 @@ button.hint {
 }
 /* Hide on mobile devices */
 @media only screen and (max-width: 768px) {
-    #head5 {
+    #head2, #head5 {
         display: none;
     }
 }
