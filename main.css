@@ -485,8 +485,8 @@ button.hint {
 	position: absolute;
 	top: 2px;
 	right: 10px;
-	display: flex;
-	align-items: center;
+	/* display: flex;
+	align-items: center; */
 }
 
 .logo img{
@@ -502,16 +502,19 @@ button.hint {
 }
 #head5 {
 	-webkit-app-region: no-drag;
-	display: inline-block;
-	text-decoration: none;
-	color: white;
-	text-align: right;
-	margin-right: 10px;
-	cursor: help;
-	font-size: 90%;
-	line-height:100%;
-	margin-top:2px;
-	order: -1;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    text-align: right;
+    margin-right: 10px;
+    cursor: help;
+    font-size: 90%;
+    line-height: 100%;
+    margin-top: 2px;
+    /* Position it absolutely */
+    position: absolute;
+    right: 45px; /* Adjust this value based on the logo width + padding */
+    top: 5px;  /* Align vertically with the logo */
 }
 /* Hide on mobile devices */
 @media only screen and (max-width: 768px) {
