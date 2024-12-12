@@ -25347,8 +25347,8 @@ function statsMenuCreator(){
 	menu.className = "debugStats remotestats";
 	getById('main').appendChild(menu);
 	
-	menu.style.left = parseInt(Math.random()*10)+15+"px"
-	menu.style.top = parseInt(Math.random()*10)+"px"
+	menu.style.right = parseInt(Math.random()*10)+15+"px"
+	menu.style.top = parseInt(Math.random()*10)+30+"px"
 	
 	menu.innerHTML="<h1 data-translate='statistics'>Statistics</h1>";
 	var menuCloseBtn = document.createElement("button");

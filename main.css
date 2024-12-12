@@ -485,8 +485,6 @@ button.hint {
 	position: absolute;
 	top: 2px;
 	right: 10px;
-	/* display: flex;
-	align-items: center; */
 }
 
 .logo img{
@@ -517,10 +515,20 @@ button.hint {
 }
 /* Hide on mobile devices */
 @media only screen and (max-width: 768px) {
-    #head2, #head5 {
-        display: none;
+    #head5, #head2 {
+        display: none !important;
     }
 }
+/* Mobile version - center the logo */
+@media only screen and (max-width: 768px) {
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        right: auto; /* Remove right positioning */
+    }
+}
+
 #head6 {
 	display: inline-block;
 	text-decoration: none;
@@ -1466,9 +1474,9 @@ button.btnArmTransferRoom.selected{
 	position: relative;
 	-webkit-app-region: no-drag;
 	}
-	#head2{
+	/* #head2{
 		display:none;
-	}
+	} */
 	#gridlayout>#container.vidcon {
 		height:85%
 	}
@@ -1480,9 +1488,9 @@ button.btnArmTransferRoom.selected{
 	#gridlayout>#container.vidcon {
 		height:81%
 	}
-	#head2 {
+	/* #head2 {
 		display:none !important;
-	}
+	} */
 
 }
 @media only screen and (max-height: 240px){
@@ -3351,7 +3359,7 @@ label {
 .debugStats {
 	font-size: 0.8rem;
 	list-style-type: none;
-	left: 50px;
+	right: 50px;
 	top: 0px;
 	width: 300px;
 	min-height: 200px;
@@ -3363,8 +3371,6 @@ label {
 	color: white;
 	padding: 20px;
 	border: 2px solid #1d1d1d;
-	padding-bottom: 100px!important;
-	margin-bottom: 100px!important;
 }
 .debugStats::-webkit-scrollbar {
 	width: 0.5em;
