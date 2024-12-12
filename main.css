@@ -506,14 +506,13 @@ button.hint {
     text-decoration: none;
     color: white;
     text-align: right;
-    margin-right: 10px;
+    margin-right: 5px;
     cursor: help;
     font-size: 90%;
     line-height: 100%;
     margin-top: 2px;
-    /* Position it absolutely */
     position: absolute;
-    right: 45px; /* Adjust this value based on the logo width + padding */
+    right: 130px; /* Adjust this value based on the logo width + padding */
     top: 5px;  /* Align vertically with the logo */
 }
 /* Hide on mobile devices */
