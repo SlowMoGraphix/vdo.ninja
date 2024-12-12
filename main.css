@@ -501,7 +501,7 @@ button.hint {
 	-webkit-app-region: no-drag;
 }
 #head5 {
-	-webkit-app-region: no-drag;
+    -webkit-app-region: no-drag;
     display: inline-block;
     text-decoration: none;
     color: white;
