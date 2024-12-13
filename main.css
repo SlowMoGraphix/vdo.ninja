@@ -560,8 +560,17 @@ button.hint {
 	margin: 0 auto;
 }
 
+/* Show both elements only on mobile devices when URL has ?room= parameter */
 @media only screen and (max-width: 768px) {
-    .mobile-title, .mobile-description {
+    /* Hide by default on homepage */
+    .mobile-title,
+    .mobile-description {
+        display: none;
+    }
+
+    /* Show only when room parameter exists */
+    body[data-room-active="true"] .mobile-title,
+    body[data-room-active="true"] .mobile-description {
         display: block;
     }
 }

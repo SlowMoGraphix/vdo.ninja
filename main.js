@@ -16,6 +16,14 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 	var ln_template = false;
 	
 	try {
+		// Check if we're on a room page
+		const urlParams = new URLSearchParams(window.location.search);
+		if (urlParams.has('room')) {
+			document.body.setAttribute('data-room-active', 'true');
+		} else {
+			document.body.setAttribute('data-room-active', 'false');
+		}
+
 		if (ConfigSettings) {
 			ln_template = ConfigSettings.getAttribute('data-translation'); // Translations
 			if (typeof ln_template === "undefined") {
@@ -31,6 +39,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 	} catch (e) {
 		errorlog(e);
 	}
+
 	if (ln_template===null) {
 		getById("mainmenu").style.opacity = 1;
 	} else if (ln_template!==false) { // checking if manual lanuage override enabled
@@ -96,7 +105,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 	} else { // check if automatic language translation is available
 		getById("mainmenu").style.opacity = 1;
 	}
-	
+
 	//// translation stuff ends ////
 	
 	if (urlParams.has('cleanoutput') || urlParams.has('clean') || urlParams.has('cleanish')) {
@@ -398,7 +407,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		}
 	} 
 	
-	if (urlParams.has('whepwait') || urlParams.has('whepicewait') || urlParams.has('whipwait') || urlParams.has('whipicewait')){ // I'm going to use this for all whip/whep for the time being.
+	if (urlParams.has('whepwait') || urlParams.has('whepicewait') || urlParams.has('whipwait') || urlParams.has('whipicewait')) { // I'm going to use this for all whip/whep for the time being.
 		session.whepWait = urlParams.get('whepwait') ||  urlParams.get('whepicewait') || urlParams.get('whipwait') ||  urlParams.get('whipicewait') || 2000; // how long we wait for ice candidates to collect; ms. whep out and whep in
 		session.whepWait = parseInt(session.whepWait);
 		if (session.whepWait<0){
@@ -426,7 +435,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 			getById("publishOutURL").classList.remove("hidden");
 		}
 		
-		if (urlParams.has('whippushtoken') || urlParams.has('whipouttoken') || urlParams.has('pushwhiptoken')) {// URL or data:base64 image. Becomes local to this viewer only.  This is like &avatar, but slightly different. Just CSS in this case
+		if (urlParams.has('whippushtoken') || urlParams.has('whipouttoken') || urlParams.has('pushwhiptoken')){// URL or data:base64 image. Becomes local to this viewer only.  This is like &avatar, but slightly different. Just CSS in this case
 			session.whipOutputToken = urlParams.get('whippushtoken') || urlParams.get('whipouttoken') || urlParams.get('pushwhiptoken') || false;
 			if (!session.whipOutputToken){
 				getById("publishOutToken").classList.remove("hidden");
@@ -1465,6 +1474,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		session.audioMeterGuest = false; 
 	}
 	
+
 	
 	if (urlParams.has('fakeuser')) {
 		log("ICE FILTER ENABLED");
@@ -1973,8 +1983,6 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		}
 	}
 
-	
-	
 	if (Firefox && !session.stereo || (session.stereo === 3)){
 		session.mono = true; // this will set the SDP to mono if firefox
 	}
@@ -2335,7 +2343,6 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		}
 	}	
 	
-
 	if (urlParams.has('obsfix')) {
 		session.obsfix = urlParams.get('obsfix');
 		if (session.obsfix) {
@@ -2827,7 +2834,6 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 	if (urlParams.has('androidfix')){
 		session.AndroidFix = true;
 	}
-	
 	
 	
 	if (urlParams.has('consent')){
@@ -4473,7 +4479,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 				}
 			}
 			session.roomid = false;
-		}
+		} 
 	}
 	
 	if ((session.permaid===false) && (session.roomid===false) && (session.view===false) && (session.effect===false) && (session.director===false)){
@@ -4763,6 +4769,108 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		session.screenShareLabel = decodeURIComponent(session.screenShareLabel);
 		} catch(e){}
 		session.screenShareLabel = session.screenShareLabel.replace(/_/g, " ")
+	}
+	
+	if (urlParams.has('whepwait') || urlParams.has('whepicewait') || urlParams.has('whipwait') || urlParams.has('whipicewait')) { // I'm going to use this for all whip/whep for the time being.
+		session.whepWait = urlParams.get('whepwait') ||  urlParams.get('whepicewait') || urlParams.get('whipwait') ||  urlParams.get('whipicewait') || 2000; // how long we wait for ice candidates to collect; ms. whep out and whep in
+		session.whepWait = parseInt(session.whepWait);
+		if (session.whepWait<0){
+			session.whepWait = 0;
+		}
+	}
+	
+	if (urlParams.has('whippushtoken') || urlParams.has('whipouttoken') || urlParams.has('pushwhiptoken')){// URL or data:base64 image. Becomes local to this viewer only.  This is like &avatar, but slightly different. Just CSS in this case
+		session.whipOutputToken = urlParams.get('whippushtoken') || urlParams.get('whipouttoken') || urlParams.get('pushwhiptoken') || false;
+		if (!session.whipOutputToken){
+			getById("publishOutToken").classList.remove("hidden");
+		}
+	}
+	
+	if (urlParams.has('motionrecord') || urlParams.has('recordmotion')) { // switch OBS to this scene when there is motion, and "solo view" this video in the VDO.Ninja auto-mixer, if used
+		session.motionRecord = parseInt(urlParams.get('motionrecord')) || parseInt(urlParams.get('recordmotion')) || 15; // threshold of motion needed to trigger
+	}
+	
+	if (urlParams.has('locked')) {
+		session.locked = true;
+		getById("lockButton").classList.remove("hidden");
+		getById("lockButton").classList.add("locked");
+		getById("lockButton").title = getTranslation("unlock-room");
+		getById("lockButton").onclick = function(){
+			session.locked = false;
+			getById("lockButton").classList.remove("locked");
+			getById("lockButton").title = getTranslation("lock-room");
+			updateURL("locked", false);
+		}
+	}
+	
+	if (urlParams.has('css')){
+		var cssURL = urlParams.get('css');
+		try {
+			var cssStyleSheet = document.createElement("link");
+			cssStyleSheet.rel = "stylesheet";
+			cssStyleSheet.type = "text/css";
+			cssStyleSheet.href = cssURL;
+			document.querySelector("head").appendChild(cssStyleSheet);
+		} catch(e){console.error(e);}
+	}
+	
+	if (urlParams.has('remote')){
+		log("remote ENABLED");
+		session.remote = urlParams.get('remote') || urlParams.get('rem') || true;
+	}
+	
+	if (urlParams.has("slideshow")){ // stream labs mobile fix ?
+		var ssinterval = parseInt(urlParams.get("slideshow")) || 25;
+		ssinterval = 1000/ssinterval;
+		session.manual = true;
+		setInterval(function(){
+			if (session.manual){
+				session.manual = false;
+				getById("manual").classList.remove("manual");
+				getById("manual").title = getTranslation("manual-mode");
+				updateURL("manual", false);
+			} else {
+				session.manual = true;
+				getById("manual").classList.add("manual");
+				getById("manual").title = getTranslation("auto-mode");
+				updateURL("manual", true);
+			}
+		}, ssinterval);
+	}
+	
+	if (urlParams.has('consent')){
+		session.consent = true;
+		getById("consentWarning").classList.remove("hidden");
+		getById("consentWarning2").classList.remove("hidden");
+	}
+	
+	if (urlParams.has('bitrate')){
+		session.bitrateGroupFlag = urlParams.get('bitrate') || false;
+		if (session.bitrateGroupFlag){
+			session.bitrateGroupFlag = "&totalbitrate="+parseInt(session.bitrateGroupFlag);
+		}
+	}
+	
+	if (urlParams.has('h264profile')) {
+		session.h264profile = urlParams.get('h264profile') || "42e01f"; // 42001f
+	}
+	
+	if (urlParams.has('meter') || urlParams.has('meterstyle')){ // same as also adding &style=3
+		session.meterStyle = urlParams.get('meter') || urlParams.get('meterstyle') || 1;
+		session.meterStyle = parseInt(session.meterStyle);
+		if (session.meterStyle<4){
+			session.style = 3;
+		}
+	}
+	
+	if (urlParams.has('screensharelabel')){
+		session.screenShareLabel = urlParams.get('screensharelabel') || false;
+		if (session.screenShareLabel){
+			try {
+				session.screenShareLabel = decodeURIComponent(session.screenShareLabel);
+			} catch(e){}
+			session.screenShareLabel = session.screenShareLabel.replace(/_/g, " ")
+		}
 	}
 	
 	if (urlParams.has('whepshare') || urlParams.has('whepsrc')) {
@@ -6793,4 +6901,5 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		};
 		script.src = "./thirdparty/polyfill.min.js"; // dynamically load this only if its needed. Keeps loading time down.
 	},100);
+
 }

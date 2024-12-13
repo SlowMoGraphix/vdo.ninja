@@ -17681,7 +17681,7 @@ async function createRoomCallback(passAdd, passAdd2) {
 	} catch (e) {
 		errorlog(e);
 	};
-
+	
 	session.director = true;
 	screensharesupport = false;
 	
