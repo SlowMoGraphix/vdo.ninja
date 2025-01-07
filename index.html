@@ -134,7 +134,7 @@
 				<div id="roomid" style="display: inline-block;"></div>
 			</div>
 			<div id="head6" class="hidden" data-translate="only-director-can-hear-you">Only the director can hear you currently.</div>
-			<div id="head7" class="hidden" data-translate="director-muted-you">The director has muted you.</div>
+			<!-- <div id="head7" class="hidden" data-translate="director-muted-you">The director has muted you.</div> -->
 			<div id="head8" class="hidden" data-translate="director-video-muted-you">The director has disabled your camera temporarily.</div>
 		</div>
 		<div id="obsState" class="hidden" >ACTIVE</div>
@@ -268,7 +268,7 @@
                 </div>
             </div>
 		</div>
-		<span id="miniTaskBar" style="float: right; bottom: 0px;right:0; position:fixed; display:flex;">
+		<span id="miniTaskBar" class="miniTaskBar" style="float: right; bottom: 0px;right:0; position:fixed; display:flex;">
 			<div id="closedList_connectUsers" class="hidden"  onclick="getById('connectUsers').classList.remove('hidden');getById('closedList_connectUsers').classList.add('hidden');">
 				<i class="las la-theater-masks"></i>
 			</div>
@@ -424,6 +424,15 @@
 							</label>
 						</div>
 					</div>
+			</div>
+			<div class="mobile-title">Benvenuto al concerto degli PSICOLOGI</div>
+			<div class="mobile-description">
+				<p>Regole:</p>
+				<ul style="list-style-type: none;">
+					<li>Non fare</li>
+					<li>Second rule</li>
+					<li>Third rule</li>
+				</ul>
 			</div>
 			<div id="container-3"  title="Add your Camera to OBS" onkeyup="enterPressedClick(event,this);"  alt="Add your Camera to OBS" tabindex="1" role="button" aria-pressed="false" class="column columnfade pointer rounded card" onclick="previewWebcam()" style=" overflow-y: auto;">
 				<h2 id="add_camera">
