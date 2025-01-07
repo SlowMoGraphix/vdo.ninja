@@ -11997,7 +11997,7 @@ function toggleMute(apply = false, event=false) { // TODO: I need to have this b
 		if (!(session.cleanOutput)){ 
 			getById("mutebutton").classList.add("red", "pulsate");
 			getById("mutebutton").ariaPressed = "true";
-			getById("header").classList.add('red');
+			// getById("header").classList.add('red');
 			
 			if (session.localMuteElement){
 				session.localMuteElement.style.display = "block";
@@ -12354,7 +12354,7 @@ function toggleVideoMute(apply = false) { // TODO: I need to have this be MUTE, 
 		if (!(session.cleanOutput)){
 			getById("mutevideobutton").classList.add("red");
 			getById("mutevideobutton").ariaPressed = "true";
-			getById("header").classList.add("red");
+			// getById("header").classList.add("red");
 			if (session.remoteVideoMuted){
 				getById("head8").classList.remove("hidden");
 			}

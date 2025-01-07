@@ -464,9 +464,9 @@ button.hint {
 
 /* ///////////////////// */
 
-.orange {
+/* .orange {
 	background-color: #673100 !important;
-}
+} */
 
 #meshcastMenu{
 	display: inline-block;
@@ -509,7 +509,7 @@ button.hint {
     text-decoration: none;
     color: white;
     text-align: right;
-    margin-right: 5px;
+    margin-right: 10px;
     cursor: help;
     font-size: 90%;
     line-height: 100%;
@@ -539,6 +539,7 @@ button.hint {
     display: none;
     text-align: center;
     padding: 10px;
+	padding-top: 80px;
 	padding-bottom: 30px;
     font-size: 1.6em;
     font-weight: bold;
@@ -3407,7 +3408,7 @@ label {
 	font-size: 0.8rem;
 	list-style-type: none;
 	right: 50px;
-	top: 0px;
+	top: 10px;
 	width: 300px;
 	min-height: 200px;
 	max-height: 99vh;
@@ -5563,7 +5564,7 @@ input[type='checkbox'], input[type='radio'] {
 }
 
 #popupSelector {
-	background: linear-gradient(6deg, rgba(221, 221, 221, 0) 4%, rgb(0,0,0, 0.5) 30%, #646878A0 100%);
+	background: linear-gradient(6deg, rgba(221, 221, 221, 0) 0%, rgb(0 0 0 / 50%) 70%, #000000a0 100%)
 	transition: all 0.2s linear 0s;
 	padding: 10px;
 	position: fixed;
@@ -5722,4 +5723,11 @@ button.toggleSettings,
 }
 #sharefilebutton{
 	display:none!important;
+}
+
+/* Desktop-only elements */
+@media only screen and (max-width: 768px) {
+    .miniTaskBar {
+        display: none !important;
+    }
 }
