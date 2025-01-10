@@ -59,7 +59,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		if (location.hostname === "rtc.ninja"){
 			try {
 				if (session.label === false) {
-					document.title = "RTC.Ninja";
+					document.title = "PSICOLOGI.DIY";
 				} 
 				getById("qos").innerHTML = "";
 				getById("logoname").innerHTML = "";
@@ -81,7 +81,7 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 				getById("chatBody").innerHTML = "";
 			} catch (e) {}
 		} else if (session.label === false) {
-			document.title = location.hostname;
+			document.title = "PSICOLOGI.DIY";
 		}
 		try {
 			if (ln_template===false){
@@ -5220,9 +5220,9 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 		try {
 			if (session.label === false) {
 				if (document.title == "") {
-					document.title = "Room=" + session.roomid.toString();
+					document.title;
 				} else {
-					document.title += ": " + session.roomid.toString();
+					document.title;
 				}
 			}
 		} catch (e) {

@@ -17676,7 +17676,7 @@ async function createRoomCallback(passAdd, passAdd2) {
 
 	try {
 		if (session.label === false) {
-			document.title = "Control Room";
+			document.title = "Control Room - PSICOLOGI";
 		}
 	} catch (e) {
 		errorlog(e);

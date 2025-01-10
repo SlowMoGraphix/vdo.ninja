@@ -5721,7 +5721,7 @@ button.toggleSettings,
 	outline: none;
 	color: white;
 }
-#sharefilebutton{
+#sharefilebutton{ 
 	display:none!important;
 }
 
@@ -5730,4 +5730,14 @@ button.toggleSettings,
     .miniTaskBar {
         display: none !important;
     }
+}
+
+.mutespeakerbutton_desktop{
+	display: none!important;
+}
+
+@media only screen and (min-width: 1024px) {
+	.mutespeakerbutton_desktop{
+		display: block!important;
+	}
 }
