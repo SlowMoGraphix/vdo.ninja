@@ -551,6 +551,7 @@ button.hint {
         left: 50%;
         transform: translateX(-50%);
         right: auto; /* Remove right positioning */
+		top: 10px;
     }
 }
 
