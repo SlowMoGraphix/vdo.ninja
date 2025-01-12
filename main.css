@@ -512,6 +512,8 @@ button.hint {
 	margin: 0;
 	padding: 0;
 	line-height: 25px; /* Matches the previous logo height */
+	text-align: center; /* Add this line to center the text horizontally */
+	width: 100%; /* Add this to ensure the text has full width to center within */
 }
 
 #head1{
@@ -1751,6 +1753,7 @@ body.darktheme{
 	height: 30vh;
 	opacity:1;
 	animation: fadeIn 0.2s;
+	margin-top: 30px;
 }
 
 #getPermissions{
@@ -1764,12 +1767,14 @@ body.darktheme{
 }
 
 .gowebcam {
-	font-size: 110%;
+	font-size: 70%;
 	background-color: #f0f0f0;
 	color: black;
 	cursor: pointer;
 	margin: 20px;
 	padding: 10px 50px;
+	border-radius: 20px;
+	font-family: "Eurostile Extended Black", "Arial Black", "Helvetica Black", sans-serif;
 }
 @-webkit-keyframes pulsate {
 	0%	{ box-shadow: 0 0 31px #244e1c44; transform: scale(1.0);}
@@ -1784,6 +1789,7 @@ body.darktheme{
 	box-shadow: 0 0 31px 0px #244e1c44;
 	border-radius: 20px;
 	font-family: "Eurostile Extended Black", "Arial Black", "Helvetica Black", sans-serif;
+	font-size: 110%;
 }
 #mainmenu {
 	height:100vh;
@@ -5329,6 +5335,7 @@ body.darktheme .startupWarning>.las  {
 	border-radius: 20px;
 	font-family: "Eurostile Extended Black", "Arial Black", "Helvetica Black", sans-serif;
 	font-size: 20px;
+	text-align: center;
 }
 
 button {
@@ -5820,7 +5827,6 @@ button.toggleSettings,
 
 @media only screen and (min-width: 1024px) {
 	.mutespeakerbutton_desktop{
-		display: block!important;
+		display: none!important;
 	}
 }
-

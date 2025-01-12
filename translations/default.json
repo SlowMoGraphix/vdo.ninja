@@ -12,7 +12,7 @@
   "added-notes": "\n<u><i>Added Notes:</i></u>\n<li>Anyone can enter a room if they know the name, so keep it unique</li>\n<li>Invite only guests to the room you trust.</li>\n<li>iOS devices will share just their audio with other guests; this is mainly a hardware limitation</li>\n<li>The \"Recording\" option is considered experimental.</li>\n",
   "back": "Back",
   "add-your-camera": "Add your Camera to OBS",
-  "waiting-for-camera": "Waiting for Camera to Load",
+  "waiting-for-camera": "WAITING FOR CAMERA TO LOAD",
   "video-source": "Video source",
   "max-resolution": "1080p (hi-def)",
   "balanced": "720p (balanced)",

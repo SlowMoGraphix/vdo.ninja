@@ -31258,7 +31258,7 @@ function setupWebcamSelection(miconly=false) {
 					document.getElementById("gowebcam").dataset.ready = "false";
 					//document.getElementById("gowebcam").style.backgroundColor = "#DDDDDD";
 					document.getElementById("gowebcam").style.fontWeight = "normal";
-					document.getElementById("gowebcam").innerHTML = "Waiting for Camera to load";
+					document.getElementById("gowebcam").innerHTML = "WAITING FOR CAMERA TO LOAD";
 					miniTranslate(document.getElementById("gowebcam"), "waiting-for-camera-to-load");
 				}
 				warnlog("video source changed");
@@ -31340,7 +31340,7 @@ function setupWebcamSelection(miconly=false) {
 					document.getElementById("gowebcam").dataset.ready = "false";
 				//	document.getElementById("gowebcam").style.backgroundColor = "#DDDDDD";
 					document.getElementById("gowebcam").style.fontWeight = "normal";
-					document.getElementById("gowebcam").innerHTML = "Waiting for Camera to load";
+					document.getElementById("gowebcam").innerHTML = "WAITING FOR CAMERA TO LOAD";
 					miniTranslate(document.getElementById("gowebcam"), "waiting-for-camera-to-load");
 				}
 
