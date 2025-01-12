@@ -4811,7 +4811,7 @@ input:checked + .slider:before {
 	min-width: min(90vw, 320px);
 }
 
-#connectUsers{
+/* #connectUsers{
 	float: right;
 	display: none;
 	position: absolute;
@@ -4828,7 +4828,7 @@ input:checked + .slider:before {
 	border: 1px solid #252525;
 	opacity: 0.7;
 	color: white;
-}
+} */
 
 #alertModal a:link {
 	color: blue;
@@ -5834,12 +5834,16 @@ button.toggleSettings,
     }
 }
 
-.mutespeakerbutton_desktop{
-	display: none!important;
-}
-
-@media only screen and (min-width: 1024px) {
-	.mutespeakerbutton_desktop{
-		display: none!important;
+/* Hide on mobile devices */
+@media (max-width: 768px), (hover: none) {
+	.mutespeakerbutton_desktop {
+	  display: none !important;
 	}
-}
+  }
+  
+  /* Show only on desktop */
+  @media (min-width: 1024px) and (hover: hover) {
+	.mutespeakerbutton_desktop {
+	  display: block;
+	}
+  }
