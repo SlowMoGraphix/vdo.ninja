@@ -5834,15 +5834,20 @@ button.toggleSettings,
     }
 }
 
-/* Hide on mobile devices */
-@media (max-width: 768px), (hover: none) {
-	.mutespeakerbutton_desktop {
-	  display: none !important;
-	}
+/* Hide on all mobile devices including iOS */
+@media (max-width: 768px), (hover: none), (-webkit-touch-callout: none), (-webkit-tap-highlight-color: rgba(0,0,0,0)) {
+  .mutespeakerbutton_desktop,
+  #mutespeakerbutton {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
   }
+}
+
   
   /* Show only on desktop */
-  @media (min-width: 1024px) and (hover: hover) {
+  @media (min-width: 769px) and (hover: hover) {
 	.mutespeakerbutton_desktop {
 	  display: block;
 	}

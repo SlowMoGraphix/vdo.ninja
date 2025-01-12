@@ -179,7 +179,7 @@
                         <i id="chattoggle" class="toggleSize las la-comment-alt"></i>
                         <div id="chatNotification"></div>
                     </div> -->
-                    <div id="mutespeakerbutton" onmousedown="event.preventDefault(); event.stopPropagation();" alt="Toggle the speaker output." aria-label="Mute Speaker output" title="Mute the Speaker (ALT + A)" onclick="toggleSpeakerMute()"  tabindex="2" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);"  class="hidden float mutespeakerbutton_desktop" style="cursor: pointer;" >
+                    <div id="mutespeakerbutton" onmousedown="event.preventDefault(); event.stopPropagation();" alt="Toggle the speaker output." aria-label="Mute Speaker output" title="Mute the Speaker (ALT + A)" onclick="toggleSpeakerMute()"  tabindex="2" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);"  class="hidden float mutespeakerbutton_desktop mobile-hidden ios-hidden" style="cursor: pointer;" >
                         <i id="mutespeakertoggle" class="toggleSize las la-volume-up" style="position: relative; top: 0.5px;"></i>
                     </div>
                     <div id="mutebutton" onmousedown="toggleMute(false, event);event.preventDefault(); event.stopPropagation();" data-translate="mute-the-mic" title="Mute the Mic (CTRL/⌘ + M)" alt="Mute the Mic" aria-label="Mute Microphone" ontouchstart="toggleMute(false, event);event.preventDefault(); event.stopPropagation();" tabindex="2" role="button" aria-pressed="false" onkeyup="enterPressedClick(event,this);"  class="hidden float" style="cursor: pointer;">
