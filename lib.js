@@ -24097,14 +24097,14 @@ async function grabVideo(quality = 0, eleName = 'previewWebcam', selector = "sel
 						}
 						activatedPreview = true;
 						if (getById('gowebcam')) {
-							getById('gowebcam').innerHTML = "Problem with Camera";
+							getById('gowebcam').innerHTML = "PROBLEM WITH CAMERA";
 						}
 
 					}
 					return;
 				} else if (e.name === "NavigatorUserMediaError") {
 					if (getById('gowebcam')) {
-						getById('gowebcam').innerHTML = "Problem with Camera";
+						getById('gowebcam').innerHTML = "PROBLEM WITH CAMERA";
 					}
 					if (!(session.cleanOutput)) {
 						warnUser("Unknown error: 'NavigatorUserMediaError'");
@@ -24113,7 +24113,7 @@ async function grabVideo(quality = 0, eleName = 'previewWebcam', selector = "sel
 				} else if (e.name === "timedOut") {
 					activatedPreview = true;
 					if (getById('gowebcam')) {
-						getById('gowebcam').innerHTML = "Problem with Camera";
+						getById('gowebcam').innerHTML = "PROBLEM WITH CAMERA";
 					}
 					if (!(session.cleanOutput)) {
 						warnUser(e.message);
@@ -24134,7 +24134,7 @@ async function grabVideo(quality = 0, eleName = 'previewWebcam', selector = "sel
 					errorlog("********Camera failed to work");
 					activatedPreview = true;
 					if (getById('gowebcam')) {
-						getById('gowebcam').innerHTML = "Problem with Camera";
+						getById('gowebcam').innerHTML = "PROBLEM WITH CAMERA";
 					}
 					if (!(session.cleanOutput)) {
 						if (session.width || session.height || session.frameRate) {

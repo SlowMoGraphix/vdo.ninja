@@ -498,11 +498,12 @@ button.hint {
 }
 
 .logo {
-	position: absolute;
-	top: 2px;
-	right: 10px;
-	display: flex;
-	align-items: center;
+    position: absolute;
+    right: 10px;
+    height: 30px; /* Match header height */
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    top: 0; /* Remove top: 2px to allow true centering */
 }
 
 .logo h1 {
@@ -1753,7 +1754,7 @@ body.darktheme{
 	height: 30vh;
 	opacity:1;
 	animation: fadeIn 0.2s;
-	margin-top: 30px;
+	margin-top: 60px;
 }
 
 #getPermissions{
@@ -1775,6 +1776,7 @@ body.darktheme{
 	padding: 10px 50px;
 	border-radius: 20px;
 	font-family: "Eurostile Extended Black", "Arial Black", "Helvetica Black", sans-serif;
+	text-align: center; /* Added this line to center the text */
 }
 @-webkit-keyframes pulsate {
 	0%	{ box-shadow: 0 0 31px #244e1c44; transform: scale(1.0);}
@@ -1790,6 +1792,7 @@ body.darktheme{
 	border-radius: 20px;
 	font-family: "Eurostile Extended Black", "Arial Black", "Helvetica Black", sans-serif;
 	font-size: 110%;
+	text-align: center; /* Added this line to center the text */
 }
 #mainmenu {
 	height:100vh;
@@ -2273,7 +2276,8 @@ div#chatBody a {
 	}
 	.column {
 		float: none !important;
-		padding: 15px 10px 1px 10px !important;
+		/* padding: 15px 10px 1px 10px !important; */
+		height: auto !important;
 	}
 	div.multiselect, .videoMenu, #videoSettings {
 		max-width: 100% !important;
@@ -2600,8 +2604,14 @@ span[data-action-type="stats-graphs-details-container"]>span{
 	transition: background-image 0.3s ease-in-out;
 	-webkit-transition: background-image 0.3s ease-in-out;
 	background-position: 50% 65%;
-	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='347.184' height='187.007' viewBox='0 0 91.859 49.479' fill='none' stroke='white' stroke-width='5' stroke-linejoin='round' xmlns:v='https://vecta.io/nano'%3E%3Cpath d='M3.15 3.15h65.569v43.179H3.15z' stroke-dashoffset='22.7149601' paint-order='markers fill stroke'/%3E%3Cpath d='M68.919 28.837L88.709 44.73V7.148L69.019 22.341z'/%3E%3C/svg%3E");
 }
+
+@media screen and (min-width: 768px) {
+	#container-3 {
+		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='347.184' height='187.007' viewBox='0 0 91.859 49.479' fill='none' stroke='white' stroke-width='5' stroke-linejoin='round' xmlns:v='https://vecta.io/nano'%3E%3Cpath d='M3.15 3.15h65.569v43.179H3.15z' stroke-dashoffset='22.7149601' paint-order='markers fill stroke'/%3E%3Cpath d='M68.919 28.837L88.709 44.73V7.148L69.019 22.341z'/%3E%3C/svg%3E");
+	}
+}
+
 #container-3a {
 	background-repeat: no-repeat;
 	background-size: 90px;
@@ -5506,7 +5516,9 @@ input[type='checkbox'], input[type='radio'] {
 }
 
 .darktheme .card {
-	background-color: var(--discord-grey-7);
+	background-color: black;
+	border: 2px solid;
+	border-color: var(--green-psicologi);
 }
 
 .card {
