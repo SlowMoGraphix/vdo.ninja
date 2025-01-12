@@ -84,7 +84,7 @@
 			</a> -->
 
 			<div class="logo">
-				<img src="./media/logo_psicologi.png" alt="logo_psicologi">
+				<h1>PSICOLOGI.DIY</h1>
 			</div>
 
 			<div id="head1">
@@ -418,20 +418,16 @@
 						</div>
 					</div>
 			</div>
-			<div class="mobile-title">Benvenuto al concerto degli PSICOLOGI</div>
+			<div class="mobile-title">PSICOLOGI.DIY<br>VIRTUAL ROOM</div>
 			<div class="mobile-description">
-				<p>Regole:</p>
-				<ul style="list-style-type: none;">
-					<li>Comportati bene</li>
-					<li>Goditi il concerto</li>
-					<li>Tutto questo è fake</li>
-				</ul>
+				Attraverso questa WebApp puoi connetterti
+				al LedWall del concerto e condividere il tuo POV
 			</div>
 			<div id="container-3"  title="Add your Camera to OBS" onkeyup="enterPressedClick(event,this);"  alt="Add your Camera to OBS" tabindex="1" role="button" aria-pressed="false" class="column columnfade pointer rounded card" onclick="previewWebcam()" style=" overflow-y: auto;">
 				<h2 id="add_camera">
 					<span data-translate="add-your-camera">Add your Camera to OBS</span>
 				</h2>
-				<div class="container-inner" id="add_camera_inner">
+				<div class="container-inner background_allscreen" id="add_camera_inner">
 					<br />
 					<p>
 						<video id="previewWebcam" class="previewWebcam task" aria-hidden="true" title="Right-click this video for additional options" data-menu="context-menu-video" oncanplay="updateStats();" controlsList="nodownload" muted autoplay playsinline ></video>
@@ -607,11 +603,11 @@
                         Remember Stream ID: <input type="checkbox" id="rememberStreamIDcheck" checked="true" />
                     </div>
 					
-					<div id="SafariWarning" class="startupWarning hidden" aria-hidden="true" title="Consider using Chrome instead of Safari">
+					<!-- <div id="SafariWarning" class="startupWarning hidden" aria-hidden="true" title="Consider using Chrome instead of Safari">
 						<i class="las la-exclamation-circle"></i>
 						<p><span data-translate="use-chrome-instead">Consider using a Chromium-based browser instead.<br />
  						Safari is more prone to having audio issues</span></p>
-					</div>
+					</div> -->
 					
 					<div id="oldiOSWarning" class="startupWarning hidden" title="Please update your version of iOS for best performance">
 						<i class="las la-exclamation-circle"></i>
@@ -2751,7 +2747,7 @@
 			</u>
 		</div>
 		<span class="hidden" id="hangupTemplate">
-			<span id="hangupContainer">👋<br><button onClick='parent.location.reload();' title="Reload the page" data-translate="reload-page">Refresh</button></span>
+			<span id="hangupContainer"><button class="button_refresh" onClick='parent.location.reload();' title="Reload the page">REFRESH</button></span>
 		</span>
 		<div id="meshcastMenu" class="hidden">
 			Meshcast publishing region: <select name="edgelist" id="edgelist" onchange="selectMeshcast(this);" title="Select a location that is closest to both you and your audience."></select>

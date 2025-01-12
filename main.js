@@ -3878,7 +3878,6 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 	//	}
 	//} 
 
-
 	if (urlParams.has('viewereffect') || urlParams.has('viewereffects') || urlParams.has('ve')) {
 		session.viewereffects = parseInt(urlParams.get('viewereffect')) || parseInt(urlParams.get('ve')) || false;
 	}
@@ -4950,14 +4949,14 @@ async function main(){ // main asyncronous thread; mostly initializes the user s
 					miniTranslate(getById("add_camera"), "join-room-with-mic", "Join Room with Microphone");
 				}
 			} else if (session.audioDevice === 0) {
-				miniTranslate(getById("add_camera"), "join-room-with-camera", "Join Room with Camera");
+				miniTranslate(getById("add_camera"), "join-room-with-camera", "JOIN ROOM WITH CAMERA");
 			} else if (session.optionalMicOnly){
 				miniTranslate(getById("add_camera"), "join-room-with-video", "Join Room with Video");
 				miniTranslate(getById("add_microphone"), "join-room-with-mic-only", "Join Room with just Microphone");
 				getById("container-3a").classList.remove("hidden");
 
 			} else{
-				miniTranslate(getById("add_camera"), "join-room-with-camera", "Join Room with Camera");
+				miniTranslate(getById("add_camera"), "join-room-with-camera", "JOIN ROOM WITH CAMERA");
 			}
 			miniTranslate(getById("add_screen"), "share-screen-with-room", "Screenshare with Room");
 		} else {
