@@ -5347,7 +5347,7 @@ body.darktheme .startupWarning>.las  {
 
 button {
 	background-color: var(--discord-grey-5);
-	color: var(--discord-text);
+	color: black;
 	filter: brightness(1);
 	display: inline-flex;
 	align-items: center;
