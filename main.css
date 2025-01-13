@@ -5349,7 +5349,6 @@ button {
 	background-color: var(--discord-grey-5);
 	color: var(--discord-text);
 	filter: brightness(1);
-
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -5479,7 +5478,7 @@ li {
 input[type='text'], input[type='password']  {
 	background-color: white;
 	border: 1px solid var(--discord-grey-8);
-	color: var(--discord-text);
+	color: black;
 	border-radius: 4px;
 	padding: 4px;
 	height: 25px;
