@@ -10,6 +10,13 @@
 	--discord-grey-7: #151714; /* primary - Edited */
 	--discord-grey-8: #5e6064;
 
+	/* Force dark theme by default */
+	color-scheme: dark;
+	--color-mode: dark;
+	--background-color: black;
+	--dark-background-color: black;
+	--container-color: #151714;
+
 	--discord-text: hsl( 210 calc(1 * 9.1%) 92% /1);
 
 	--darktheme-red: rgb(161, 45, 45);
@@ -23,7 +30,7 @@
 	--lighttheme-1: #fff;
 	--lighttheme-2: #f3f3f3;
 	--lighttheme-3: #ddd;
-	--lighttheme-4: #ccc; /* primary */
+	--lighttheme-4: #ccc; 
 	--lighttheme-5: #bbb;
 	--lighttheme-6: #aaa;
 	--lighttheme-7: #7e7e7e;
@@ -64,9 +71,6 @@
 	--codirector-dark-box: rgb(129 127 127);
 
 	/* Original colors */
-	--background-color: #141926;
-	--dark-background-color: #000000; /* Edited */
-	--container-color: #151714; /* Edited */
 	--button-color: #2A2A2A;
 	--blue-accent: #4a4c63;
 	--red-accent: #553737;
@@ -92,16 +96,10 @@
 	--background-main-image: unset;
 	--show-codirectors: inline-block;
 	--full-screen-button: inherit;
-	--color-mode: light;
 	--video-background-image-size: auto 30%;
 
 	/* Custom Colors */
 	--green-psicologi: #1DFF00;
-}
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-mode: dark;
-	}
 }
 
 * {
@@ -1000,6 +998,7 @@ hr {
 #gridlayout{
 	z-index:-1;
 }
+
 .directorsgrid {
 	justify-items: normal;
 	display: block ! important;
@@ -1713,24 +1712,21 @@ html {
 body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
-	color: var(--gray90);
+	color: var(--discord-text);
 	padding: 0 0px;
 	height: 100%;
 	width: 100%;
-	background-color: var(--background-color);
+	background-color: var(--dark-background-color);
 	font-family: Helvetica, Arial, sans-serif;
 	border: 0;
 	margin: 0;
 	opacity: 1;
 	transition: opacity .1s linear;
-	scrollbar-color:#666 #201c29;
-	display:flex;
+	scrollbar-color: #666 #201c29;
+	display: flex;
 	flex-direction: column;
 	position: fixed;
-	padding-top: 30px; /* Added */
-}
-body.darktheme{
-	background-color: var(--dark-background-color);
+	padding-top: 30px;
 }
 
 ::-webkit-scrollbar {
@@ -5350,8 +5346,8 @@ body.darktheme .startupWarning>.las  {
 }
 
 button {
-	background-color: var(--lighttheme-2);
-	color: var(--lighttheme-text);
+	background-color: var(--discord-grey-5);
+	color: var(--discord-text);
 	filter: brightness(1);
 
 	display: inline-flex;
@@ -5444,8 +5440,9 @@ button.white {
 }
 
 select {
-	background-color: var(--lighttheme-1);
-	color: var(--lighttheme-text);
+	background-color: var(--discord-grey-5);
+	color: var(--discord-text);
+	border: 1px solid var(--discord-grey-8);
 	border-radius: 4px;
 	font-size: 16px;
 	padding: 1px 2px;
@@ -5480,9 +5477,9 @@ li {
 }
 
 input[type='text'], input[type='password']  {
-	background-color: var(--lighttheme-1);
-	border: 1px solid var(--lighttheme-6);
-	color: var(--lighttheme-text);
+	background-color: white;
+	border: 1px solid var(--discord-grey-8);
+	color: var(--discord-text);
 	border-radius: 4px;
 	padding: 4px;
 	height: 25px;
@@ -5532,7 +5529,7 @@ input[type='checkbox'], input[type='radio'] {
 
 .container-inner {
 	display: none;
-	background-color: var(--lighttheme-3);
+	background-color: var(--discord-grey-7);
 	min-height: calc(100% - 100px);
 	margin-bottom:30px;
 }
@@ -5845,10 +5842,4 @@ button.toggleSettings,
   }
 }
 
-  
-  /* Show only on desktop */
-  @media (min-width: 769px) and (hover: hover) {
-	.mutespeakerbutton_desktop {
-	  display: block;
-	}
-  }
+      
