@@ -5841,8 +5841,11 @@ button.toggleSettings,
   }
 }
 
-@media (max-width: 768px) (:hover:none) {
-	.debugStats remotestats {
+@media (max-width: 768px){
+	.debugStats remotestats,
+	#menuStatsBox {
 		display: none !important;
+		visibility: hidden !important;
+		opacity: 0 !important;
 	}
 }
