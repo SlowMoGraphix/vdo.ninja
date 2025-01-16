@@ -5841,4 +5841,8 @@ button.toggleSettings,
   }
 }
 
-      
+@media (max-width: 768px) (:hover:none) {
+	.debugStats remotestats {
+		display: none !important;
+	}
+}
