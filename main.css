@@ -4805,6 +4805,7 @@ input:checked + .slider:before {
 	z-index:32;
 	overflow-wrap: break-word;
 	min-width: min(90vw, 320px);
+	display: none !important;
 }
 
 /* #connectUsers{
@@ -4865,7 +4866,7 @@ input:checked + .slider:before {
 	right: 0;
 	bottom: 0;
 	z-index: 0;
-	opacity: 0.8;
+	opacity: 0;
 }
 #modalBackdrop.darktheme{
 	background-color: var(--dark-background-color);
